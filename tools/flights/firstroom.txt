@@ -1,0 +1,18 @@
+# Into the first room, and a click on the deck.
+#
+# Two things this catches, both of which looked like the game hanging:
+#
+#   - `o1_animatePalette` is a **frame boundary** and reads the input. The
+#     script that waits for the mouse button to come up does it with a loop
+#     whose whole body is `animateCursor` + `animatePalette`; with the colour
+#     cycling alone that loop never yields and never sees the button released,
+#     so the first click froze the game.
+#   - clicking a walkable tile reaches `o2_moveGoblin`, which is the one
+#     goblin opcode still handed to the host. The goblin does not walk, but
+#     nothing spins either.
+#
+# Run it with the path the app really takes:
+#   node tools/playtot.mjs --skip DEMO=MENU --plan tools/flights/firstroom.txt
+wait 120
+click 160 120 1
+wait 600

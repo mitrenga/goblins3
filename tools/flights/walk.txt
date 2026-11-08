@@ -1,0 +1,14 @@
+# Blount walks.
+#
+# Into the first room, then a click low and to the left of where he starts.
+# He is on the upper walkway; the way down is by the stairs, so this is not a
+# straight line and the way points have to be used.
+#
+# What it proves, and what nothing before it could: `map.js` finds a way,
+# `goblin.js` turns him towards each step and moves him a tile per animation
+# cycle, and he stops when he arrives (`pathExistence` 3 -> 4 -> 5).
+#
+#   node tools/playtot.mjs --skip DEMO=MENU --plan tools/flights/walk.txt
+wait 120
+click 60 130 1
+wait 400

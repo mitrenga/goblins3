@@ -1,0 +1,9 @@
+{
+  "name": "coktel",
+  "edition": "floppy",
+  "file": "COKTEL.IMS",
+  "paletteFile": "COKTEL.CLT",
+  "width": 320,
+  "height": 200,
+  "note": "The first screen the original shows: the Coktel Vision logo, painted before any script runs and then faded in (sources/reference/gob/init.cpp). The CD edition plays COKTEL.IMD here instead."
+}

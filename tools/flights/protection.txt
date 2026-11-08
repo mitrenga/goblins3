@@ -1,0 +1,29 @@
+# A flight through the floppy edition's copy protection screen.
+#
+# The intro chain ends at PROT: eight colour buttons across the top and a
+# question in the box below. The answer is different every time, so this
+# cannot get *past* it — what it does prove is that the buttons are hotspots
+# the engine finds, enters and runs: every click here lands on one.
+wait 60
+key return          # past the title sequence
+wait 60
+key return
+wait 120
+
+move 20 10          # over the first button, so it gets an "enter"
+wait 10
+move 60 10          # and along the row, one "leave" and one "enter" each
+wait 10
+move 100 10
+wait 10
+move 140 10
+wait 10
+
+click 20 10 1       # and then press them
+wait 20
+click 60 10 1
+wait 20
+click 100 10 1
+wait 20
+click 140 10 1
+wait 60

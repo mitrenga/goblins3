@@ -1,0 +1,18 @@
+# The view follows the pointer sideways.
+#
+# The first room is 472 pixels wide and the screen is 320, so 152 pixels of it
+# are off to the right and the only way to them is to push the pointer against
+# the edge. The engine then moves the view half a cursor at a time and warps
+# the pointer back inside, so that holding it there keeps the view coming.
+#
+# This is what it catches: `noScroll` starts true and only the third Goblins
+# clears it (`Init_v3::initVideo` in the reference). Without that the room's
+# right-hand third is unreachable and the game looks finished when it is not.
+#
+# Run it with the path the app really takes:
+#   node tools/playtot.mjs --skip DEMO=MENU --plan tools/flights/scroll.txt
+wait 120
+move 318 100        # against the right edge of the screen
+wait 400            # and hold it there
+move 0 100          # and back: against the left edge
+wait 400
