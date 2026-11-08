@@ -1,0 +1,26 @@
+build/
+tools/vendor/
+node_modules/
+config/config.php
+sources/tape/
+sources/rom/
+__pycache__/
+*.pyc
+js
+
+# original game data from the GOG copy - copyrighted, never committed (see assets/original/README.md)
+assets/original/*
+!assets/original/README.md
+
+# neither the reference material nor the game data ever go into git
+# (operator, 2026-09-14; the repository itself is public since 2026-11-08)
+sources/
+assets/
+
+# unpacked original data - derived from the operator's copy, same rules as assets/
+data/
+CLAUDE.md
+.claude/
+MILNIKY.md
+ZADANI.md
+*.log
